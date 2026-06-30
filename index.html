@@ -1,0 +1,190 @@
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+.wrap{font-family:'DM Mono',monospace;background:#F7F2EA;color:#2A1F0E}
+
+.header{padding:2.5rem 3rem;border-bottom:1px solid #C9B99A;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.brand-name{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;letter-spacing:-1px;color:#2A1F0E;line-height:1}
+.brand-sub{font-size:10px;letter-spacing:4px;color:#8A7A62;text-transform:uppercase;margin-top:5px}
+.ig-link{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:1.5px;color:#5C4A2A;text-decoration:none;border:1px solid #C9B99A;padding:10px 18px;background:#EDE5D4;text-transform:uppercase}
+.ig-link:hover{background:#DDD0BA}
+
+.divider{display:flex;align-items:center;gap:16px;padding:0 3rem;margin:2rem 0}
+.divider-line{flex:1;height:1px;background:#C9B99A}
+.divider-text{font-size:9px;letter-spacing:5px;color:#8A7A62;text-transform:uppercase;white-space:nowrap}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-top:1px solid #C9B99A;
+  border-left:1px solid #C9B99A;
+  margin:0 3rem 3rem;
+}
+
+.card{border-right:1px solid #C9B99A;border-bottom:1px solid #C9B99A;background:#F7F2EA}
+
+.thumb{
+  width:100%;aspect-ratio:1;
+  background:#EDE5D4;
+  display:flex;align-items:center;justify-content:center;
+  font-size:64px;
+  border-bottom:1px solid #C9B99A;
+  position:relative;
+  padding:2rem;
+}
+.sold-banner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(247,242,234,0.65)}
+.sold-stamp{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;color:#8A7A62;border:2px solid #8A7A62;padding:5px 16px;transform:rotate(-12deg)}
+
+.card-body{padding:1.5rem}
+.item-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;line-height:1.45;margin-bottom:8px;color:#2A1F0E}
+.item-price{font-size:12px;letter-spacing:1px;color:#5C4A2A;margin-bottom:14px}
+
+.desc-btn{background:none;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;color:#8A7A62;padding:0;margin-bottom:14px;display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.desc-btn:hover{color:#5C4A2A}
+.desc-btn::before{content:'';display:inline-block;width:12px;height:1px;background:currentColor}
+
+.desc-box{font-size:12px;line-height:1.8;color:#5C4A2A;margin-bottom:16px;padding:12px 14px;background:#EDE5D4;border-left:2px solid #C9B99A;display:none}
+.desc-box.open{display:block}
+.close-btn{background:none;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;color:#8A7A62;padding:0;margin-top:10px;display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.close-btn:hover{color:#5C4A2A}
+.close-btn::before{content:'';display:inline-block;width:12px;height:1px;background:currentColor}
+
+.dm-btn{display:block;text-align:center;text-decoration:none;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:12px;border:1px solid #2A1F0E;color:#2A1F0E;background:transparent}
+.dm-btn:hover{background:#2A1F0E;color:#F7F2EA}
+.sold-btn{display:block;text-align:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:12px;border:1px solid #C9B99A;color:#8A7A62;cursor:default}
+
+.footer{padding:1.5rem 3rem;border-top:1px solid #C9B99A;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-left{font-size:9px;letter-spacing:3px;color:#8A7A62;text-transform:uppercase}
+.footer-right{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:#8A7A62}
+
+@media(max-width:600px){
+  .header{padding:1.5rem}
+  .divider{padding:0 1.5rem;margin:1.5rem 0}
+  .grid{grid-template-columns:1fr;margin:0 1.5rem 2rem}
+  .thumb{font-size:80px;aspect-ratio:4/3}
+  .footer{padding:1.2rem 1.5rem}
+}
+</style>
+
+<div class="wrap">
+
+<div class="header">
+  <div>
+    <div class="brand-name">J2NDC</div>
+    <div class="brand-sub">Jogja Second Chance</div>
+  </div>
+  <a class="ig-link" href="https://instagram.com/j2ndc" target="_blank">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    @j2ndc — DM untuk beli
+  </a>
+</div>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-text">Katalog Koleksi</div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="thumb">
+      <img src="1.jpg" alt="Kaset Metallica" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="card-body">
+      <div class="item-name">Kaset Metallica — Master of Puppets</div>
+      <div class="item-price">Rp 450.000</div>
+      <button class="desc-btn" onclick="toggle(this)">Lihat deskripsi</button>
+      <div class="desc-box">Kaset pita original era 80-an, kondisi baik dengan artwork asli. Label tercantum jelas, pita masih mulus diputar.<button class="close-btn" onclick="tutup(this)">Tutup deskripsi</button></div>
+      <a class="dm-btn" href="https://instagram.com/j2ndc" target="_blank">DM untuk beli</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="2.jpg" alt="Kaset Metallica" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="card-body">
+      <div class="item-name">Kamera Analog Minolta X-700</div>
+      <div class="item-price">Rp 1.200.000</div>
+      <button class="desc-btn" onclick="toggle(this)">Lihat deskripsi</button>
+      <div class="desc-box">Kamera SLR 35mm ikonik dari tahun 1981. Rana berfungsi sempurna, cermin bersih, tanpa kebocoran cahaya.<button class="close-btn" onclick="tutup(this)">Tutup deskripsi</button></div>
+      <a class="dm-btn" href="https://instagram.com/j2ndc" target="_blank">DM untuk beli</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="1.jpg" alt="Jaket Levi's" style="width:100%;height:100%;object-fit:cover;">
+      <div class="sold-banner"><div class="sold-stamp">Terjual</div></div>
+    </div>
+    <div class="card-body">
+      <div class="item-name">Jaket Denim Vintage Levi's 507XX</div>
+      <div class="item-price">Rp 2.800.000</div>
+      <button class="desc-btn" onclick="toggle(this)">Lihat deskripsi</button>
+      <div class="desc-box">Trucker jacket Levi's era 70-an dengan fade alami. Size M, tidak ada tambalan atau sobekan.<button class="close-btn" onclick="tutup(this)">Tutup deskripsi</button></div>
+      <div class="sold-btn">Terjual</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="2.jpg" alt="Kaset Metallica" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="card-body">
+      <div class="item-name">Jam Tangan Seiko 5 Automatic</div>
+      <div class="item-price">Rp 850.000</div>
+      <button class="desc-btn" onclick="toggle(this)">Lihat deskripsi</button>
+      <div class="desc-box">Jam mekanis Seiko 5 produksi Jepang tahun 1985. Movement 7009A berjalan akurat, strap masih original.<button class="close-btn" onclick="tutup(this)">Tutup deskripsi</button></div>
+      <a class="dm-btn" href="https://instagram.com/j2ndc" target="_blank">DM untuk beli</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="1.jpg" alt="Jaket Levi's" style="width:100%;height:100%;object-fit:cover;">
+      <div class="sold-banner"><div class="sold-stamp">Terjual</div></div>
+    </div>
+    <div class="card-body">
+      <div class="item-name">Konsol Game Boy Original Nintendo</div>
+      <div class="item-price">Rp 950.000</div>
+      <button class="desc-btn" onclick="toggle(this)">Lihat deskripsi</button>
+      <div class="desc-box">Game Boy DMG-01 asli tahun 1989. Layar mulus tanpa dead pixel, tombol responsif, baterai cover lengkap.<button class="close-btn" onclick="tutup(this)">Tutup deskripsi</button></div>
+      <div class="sold-btn">Terjual</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="2.jpg" alt="Kaset Metallica" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="card-body">
+      <div class="item-name">Koin Kuno Benggol 2.5 Cent 1945</div>
+      <div class="item-price">Rp 380.000</div>
+      <button class="desc-btn" onclick="toggle(this)">Lihat deskripsi</button>
+      <div class="desc-box">Uang koin Hindia Belanda kondisi VF. Detail wajah Ratu Wilhelmina masih terlihat jelas di kedua sisi.<button class="close-btn" onclick="tutup(this)">Tutup deskripsi</button></div>
+      <a class="dm-btn" href="https://instagram.com/j2ndc" target="_blank">DM untuk beli</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-left">Yogyakarta, Indonesia</div>
+  <div class="footer-right">Barang langka · Kesempatan kedua</div>
+</div>
+
+</div>
+
+<script>
+function toggle(btn){
+  btn.nextElementSibling.classList.add('open');
+  btn.style.display='none';
+}
+function tutup(btn){
+  const box=btn.closest('.desc-box');
+  box.classList.remove('open');
+  box.previousElementSibling.style.display='';
+}
+</script>
